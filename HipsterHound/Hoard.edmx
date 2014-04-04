@@ -37,6 +37,9 @@
           <NavigationProperty Name="Album" Relationship="Hoard.AlbumArtist" FromRole="Artist" ToRole="Album" />
         </EntityType>
         <EntityType Name="Album">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" />
           <NavigationProperty Name="Artist" Relationship="Hoard.AlbumArtist" FromRole="Album" ToRole="Artist" />
